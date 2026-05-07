@@ -37,7 +37,9 @@ WHERE schema_name = '<source>'
 ORDER BY key;
 ```
 
-5. **Then query:**
+5. **Build SQL table references from `schema_name` and `table_name`.** For normal lowercase names, use `<source>.<table>`, for example `github.pulls`. Do not quote the combined string as `"<source>.<table>"`: SQL treats that as one identifier. If quoting is needed, quote each component separately, for example `"github"."pulls"`.
+
+6. **Then query:**
 
 ```bash
 coral sql "SELECT <columns> FROM <source>.<table> WHERE <required_filters> LIMIT 10"

@@ -92,7 +92,7 @@ coral sql "SELECT table_name FROM coral.tables WHERE schema_name = 'my_source'"
 coral sql "SELECT table_name, column_name, is_required_filter FROM coral.columns WHERE schema_name = 'my_source' ORDER BY table_name, column_name"
 ```
 
-If the source is named or repo-bundled, add representative `test_queries` for a basic smoke/connection check and run:
+If the source is named or lives in the Coral repo, add representative `test_queries` for a basic smoke/connection check and run:
 
 ```sh
 coral source test my_source

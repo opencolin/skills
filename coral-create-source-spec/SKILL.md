@@ -1,6 +1,6 @@
 ---
 name: coral-create-source-spec
-description: Create or update a Coral source spec YAML for a custom HTTP API or local dataset. Use when authoring a standalone source for `coral source add --file`, or when adapting that spec into a bundled source in the Coral repo.
+description: Create or update a Coral source spec YAML for a custom HTTP API or local dataset. Use when authoring a standalone source for `coral source add --file`, or when adapting that spec into a Coral repo source under `sources/core` or `sources/community`.
 ---
 
 # Create Source Spec
@@ -30,7 +30,7 @@ That means:
 - validate by querying it
 - iterate until the shape is correct
 
-Only switch to repo-bundled layout when the user is explicitly editing the Coral repo.
+Only switch to Coral repo layout when the user is explicitly editing the Coral repo.
 
 ## Output Modes
 
@@ -39,7 +39,8 @@ Only switch to repo-bundled layout when the user is explicitly editing the Coral
   - validate structure with `coral source lint ./my-source.yaml`
   - load it with `coral source add --file ./my-source.yaml` when you need to query it through Coral
 - Coral repo contribution:
-  - write the source spec to `sources/<name>/manifest.yaml`
+  - write community source specs to `sources/community/<name>/manifest.yaml`
+  - write core source specs to `sources/core/<name>/manifest.yaml` only when the user is intentionally changing bundled core sources
   - add representative `test_queries` for a basic smoke/connection check of the source
   - validate with `coral source test <name>` and repo checks
 
@@ -63,7 +64,7 @@ Only switch to repo-bundled layout when the user is explicitly editing the Coral
 5. Validate the source in the right mode:
    - standalone specs: `coral source add --file <path>` and inspect with `coral sql`
    - `coral source add` is non-interactive by default: each input `key` is read from the matching environment variable. Export required variables and secrets before running, or pass `--interactive` to be prompted.
-   - named or repo-bundled sources: `coral source test <name>`
+   - repo sources or already-named sources: `coral source test <name>`
 6. Inspect the exposed shape:
    - inspect `coral.tables`
    - inspect `coral.columns`
@@ -142,7 +143,7 @@ coral sql "SELECT * FROM coral.columns WHERE schema_name = 'my_source'"
 coral sql "SELECT key, kind, value, default_value, hint, required, is_set FROM coral.inputs WHERE schema_name = 'my_source' ORDER BY key"
 ```
 
-For repo-bundled or already-named sources, add `test_queries` for a basic smoke/connection check and run:
+For repo sources or already-named sources, add `test_queries` for a basic smoke/connection check and run:
 
 ```sh
 coral source test my_source

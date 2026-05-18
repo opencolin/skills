@@ -1,61 +1,52 @@
 ---
 name: coral
-description: "Query APIs, files, and live sources using Coral SQL. Use when the user asks about data from GitHub, Slack, Linear, Datadog, Sentry, or other connected sources."
+description: "Query live sources through Coral MCP. Use when the task needs GitHub, Jira, Slack, Linear, Datadog, Sentry, files, or connected data."
 ---
 
-# Coral CLI Skill
+# Coral
 
-Use this skill to answer data questions by querying connected sources with `coral sql`.
+## Overview
 
-## Discovery-First Workflow
+Use this as the Coral entrypoint for external context. Query Coral before answering from assumptions or changing code when live external state matters.
 
-Before writing any query, follow these steps:
+- Use Coral MCP tools/resources for discovery and query.
+- Do not use the `coral` CLI, compile Coral, copy binaries, or bootstrap a server unless explicitly asked.
+- Do not switch to vendor tools for the same read unless the user asks to continue without Coral or Coral does not cover the source.
 
-1. **List available regular tables:**
+## Support Checks
 
-```sql
-SELECT schema_name, table_name, description, required_filters, guide FROM coral.tables;
-```
+- Confirm Coral MCP tools/resources before making external-system claims.
+- If Coral MCP is unavailable, state the blocker and stop; no local recovery.
+- Distinguish missing source config, missing credentials, query errors, and empty results.
+- If scope is missing, inspect guidance first, then ask for the smallest missing identifier.
 
-2. **Read the `guide` column** — it contains per-table query patterns and gotchas. Use it.
+## Workflow
 
-3. **List available table functions.** Table functions expose API endpoints that require arguments. They are listed in `coral.table_functions`, not `coral.tables`, and their result columns are listed in `result_columns_json`, not `coral.columns`.
+1. Identify the needed source, entity, and scope from the user request.
+2. Discover tables with `list_tables`; page large catalogs and narrow by schema when useful.
+3. Read `list_tables`, `coral://guide`, or `coral://tables` for `sql_reference`, `required_filters`, and examples.
+4. Inspect `coral.columns` for candidate columns, required filters, virtual columns, and descriptions.
+5. Inspect `coral.inputs` when source configuration affects the answer.
+6. Query with `sql`: select useful columns, include required filters, and add `LIMIT` unless complete output is requested.
+7. Summarize evidence, gaps, and next action. If editing code, use the Coral result to guide changes.
 
-```sql
-SELECT schema_name, function_name, description, arguments_json, result_columns_json
-FROM coral.table_functions
-ORDER BY schema_name, function_name;
-```
+## Query Rules
 
-Use `arguments_json` to learn required and optional arguments, and `result_columns_json` to learn output columns.
+- Use each table's `sql_reference`; write `github.pulls` or `"github"."pulls"`, not `"github.pulls"`.
+- Virtual columns are filter-only and return `NULL`; check `is_virtual`.
+- Required filters must appear in `WHERE`; inspect `required_filters` and `is_required_filter`.
+- Secret inputs always return `value = NULL`; use `is_set`.
+- Cross-source joins work and execute locally after source scans complete.
+- Keep answers compact: name the source, table, required filters, and query shape. Avoid exhaustive column dumps unless requested.
+- Lead with the answer or blocker. Include SQL only when it helps the user trust or reuse the result.
 
-4. **Check required filters** for the regular table you want to query. Queries against tables with required filters will fail without the corresponding WHERE clauses.
+## Boundaries
 
-```sql
-SELECT column_name, data_type, is_required_filter, is_virtual, description
-FROM coral.columns
-WHERE schema_name = '<source>' AND table_name = '<table>'
-ORDER BY ordinal_position;
-```
+- Manifest fallback is only by request; inspect the smallest relevant sections and summarize table/filter shape.
+- Do not paste large manifest excerpts, present source-wide conclusions without query coverage, or treat query failures as empty results.
 
-5. **Inspect source inputs when config affects the query or answer.** This matters when you need source-specific values such as Datadog's `DD_SITE` or Sentry's `SENTRY_ORG` to build absolute links, explain account scope, or debug missing configuration.
+## Feedback
 
-```sql
-SELECT key, kind, value, default_value, hint, required, is_set
-FROM coral.inputs
-WHERE schema_name = '<source>'
-ORDER BY key;
-```
+If the MCP `feedback` tool is available, file feedback when Coral blocks progress, pushes an unproductive pattern, or a vendor tool was easier for the same read.
 
-6. **Then query:**
-
-```bash
-coral sql "SELECT <columns> FROM <source>.<table> WHERE <required_filters> LIMIT 10"
-coral sql "SELECT <columns> FROM <source>.<function>(arg_name => 'arg_value') WHERE <row_filters> LIMIT 10"
-```
-
-## Query Guidance
-
-- **Virtual columns:** Filter-only columns accepted in WHERE clauses but returning NULL in results. Check `is_virtual` in `coral.columns`.
-- **`coral.inputs`:** Use it to inspect per-source variables and secrets before making assumptions about URLs, org names, regions, or other source config. Secret rows always return `value = NULL`; use `is_set` to confirm whether a secret is configured.
-- **Cross-source joins:** Standard SQL JOINs work across source schemas. Cross-source joins execute in memory after source scans complete.
+Include `trying_to_do`, `tried`, and `stuck`, with table/source names, query snippets, and error text. Do not file feedback for ordinary empty results or missing credentials unless Coral made the problem unclear.

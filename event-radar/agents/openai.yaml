@@ -1,5 +1,4 @@
----
 interface:
   display_name: "Event Radar"
-  short_description: "Score and dedupe event attendees into a CRM-ready lead list."
-  default_prompt: "Use $event-radar to turn this event attendee list into scored, deduped, CRM-ready leads."
+  short_description: "Rank which events to attend and who to meet there."
+  default_prompt: "Use $event-radar to decide which events to attend and who to pitch."

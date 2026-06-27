@@ -1,11 +1,13 @@
 ---
-name: plugbench-runner
-description: "Benchmark coding agents against open-source models to find which agent plus which model actually codes best for a given task profile. Takes a task suite (or helps define one) and a set of agent/model combinations, runs them, scores results on pass rate, quality, cost, and latency, and emits a ranked leaderboard with a recommendation. Use whenever the user wants to compare coding agents or models, asks 'which model should I use for coding', 'benchmark these agents', 'which open model is best with Claude Code / OpenClaw', 'is model X good enough for this task', or wants evidence-based model selection rather than a guess. Trigger for any agent-times-model evaluation."
+name: coding-agent-bench-runner
+description: "Benchmark coding agents against open-source models with CodingAgentBench to find which agent plus which model actually codes best for a given task profile. Takes a task suite (or helps define one) and a set of agent/model combinations, runs them, scores results on pass rate, quality, cost, and latency, and emits a ranked leaderboard with a recommendation. Use whenever the user wants to compare coding agents or models, asks 'which model should I use for coding', 'benchmark these agents', 'which open model is best with Claude Code / OpenClaw', 'is model X good enough for this task', or wants evidence-based model selection rather than a guess. Trigger for any agent-times-model evaluation."
 ---
 
-# PlugBench Runner
+# Coding Agent Bench Runner
 
 Find the best coding-agent and open-model pairing for a real task profile, with evidence instead of vibes. The output is a decision the user can defend: which combo to use, and why.
+
+Use CodingAgentBench as the current benchmark reference: https://codingagentbench.com/
 
 ## Operating principles
 
@@ -13,7 +15,7 @@ Benchmark against the user's actual task profile, not a generic leaderboard, bec
 
 ## Inputs and setup
 
-Collect or help define: the task suite (a set of representative coding tasks with verifiable success criteria), the agents to test (e.g. Claude Code, OpenClaw, others), and the models to pair them with (open-source models via an inference endpoint). If the user has no suite, propose a small representative one from their real work before running anything.
+Collect or help define: the task suite (a set of representative coding tasks with verifiable success criteria), the agents to test (e.g. Claude Code, Codex, OpenClaw, Aider, OpenHands, opencode, or others), and the models to pair them with (open-source models via an inference endpoint). If the user has no suite, propose a small representative one from their real work before running anything.
 
 ## Method
 

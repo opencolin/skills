@@ -85,7 +85,7 @@ Restart Codex after installing new skills.
 | [`transcript-to-podcast`](transcript-to-podcast/SKILL.md) | Turn any transcript or document into a realistic multi-voice podcast script. |
 | [`deck-upgrader`](deck-upgrader/SKILL.md) | Upgrade a flat deck or outline into an interactive, brand-themed web slideshow spec. |
 | [`demo-pitch-polish`](demo-pitch-polish/SKILL.md) | Turn a raw product demo into a punchy pitch: titles, hook, 60-second script, thumbnail, and blurb. |
-| [`plugbench-runner`](plugbench-runner/SKILL.md) | Benchmark coding agents against open models and emit a ranked leaderboard. |
+| [`coding-agent-bench-runner`](coding-agent-bench-runner/SKILL.md) | Benchmark coding agents against open models with CodingAgentBench and emit a ranked leaderboard. |
 | [`api-key-hygiene`](api-key-hygiene/SKILL.md) | Audit a repo or environment for exposed secrets and produce a masked remediation plan. |
 | [`devrel-strategy-builder`](devrel-strategy-builder/SKILL.md) | Produce an outside-in DevRel strategy and leave-behind one-pager. |
 | [`community-space-ops`](community-space-ops/SKILL.md) | Plan and run a community or events space: programming, member comms, ops, scheduling, and economics. |

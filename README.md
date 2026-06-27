@@ -45,6 +45,19 @@ Restart Codex after installing new skills.
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
 
+### DevRel & Events
+
+| Skill | Description |
+|---|---|
+| [`ambassador-program-builder`](ambassador-program-builder/SKILL.md) | Build a complete ambassador program — tiers, benefits, application flow, onboarding, and tracking — for developer communities, DevRel programs, or AI/web3 ecosystems. |
+| [`community-launch-kit`](community-launch-kit/SKILL.md) | Generate a Discord/Slack/Telegram server structure, welcome message, onboarding flow, and 30-day content calendar for a new developer community. |
+| [`devrel-email-sequence`](devrel-email-sequence/SKILL.md) | Generate a 3–5 email developer relations sequence with subject lines, preview text, and full body copy for Beehiiv, Mailchimp, or HubSpot. |
+| [`devrel-strategy-doc`](devrel-strategy-doc/SKILL.md) | Generate a complete DevRel strategy document with OKRs, 90-day plan, channel strategy, and budget framework for pitching or running a DevRel program. |
+| [`event-brief-generator`](event-brief-generator/SKILL.md) | Generate a Luma-ready event description, email blast copy, and LinkedIn + X/Twitter social copy from minimal event inputs. |
+| [`hackathon-rubric-builder`](hackathon-rubric-builder/SKILL.md) | Build a complete hackathon judging rubric, per-category scoring guide, and judge briefing doc for AI, web3, or general developer hackathons. |
+| [`speaker-outreach-dm`](speaker-outreach-dm/SKILL.md) | Generate 3 personalized cold outreach messages to recruit speakers or panelists for developer events across iMessage, LinkedIn, Twitter/X, or email. |
+| [`sponsor-pitch-deck`](sponsor-pitch-deck/SKILL.md) | Generate a sponsor one-pager with tiered pricing, audience value props, and a cold outreach email for a developer event, community, or hackathon. |
+
 ## Contributing
 
 This repo is meant to be friendly to both humans and coding agents.

@@ -45,6 +45,17 @@ Restart Codex after installing new skills.
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
 
+### DevRel Operator Pack
+
+| Skill | Description |
+|---|---|
+| [`event-page-generator`](event-page-generator/SKILL.md) | Turn a rough event idea into a publish-ready page with titles, hook, agenda, logistics, CTA, and a reminder sequence. |
+| [`hackathon-in-a-box`](hackathon-in-a-box/SKILL.md) | Generate a full hackathon operating plan: run-of-show, judging rubric, prize and sponsor tiers, judge brief, comms, and logistics. |
+| [`developer-email-writer`](developer-email-writer/SKILL.md) | Write trust-first email and newsletter copy for a developer audience, with subject variants and a deliverability checklist. |
+| [`devrel-content-multiplier`](devrel-content-multiplier/SKILL.md) | Turn one talk, demo, repo, or launch into a thread, a LinkedIn post, a newsletter blurb, and a short blog post. |
+| [`sponsor-outreach-kit`](sponsor-outreach-kit/SKILL.md) | Turn an event into a sponsorship package: audience snapshot, one-pager, tiered menu with pricing, and a cold outreach sequence. |
+| [`integration-quickstart-generator`](integration-quickstart-generator/SKILL.md) | Generate a developer-ready quickstart and starter README for any tool, API, or SDK, optimized for time-to-first-success. |
+
 ## Contributing
 
 This repo is meant to be friendly to both humans and coding agents.

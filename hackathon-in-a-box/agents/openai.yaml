@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hackathon in a Box"
+  short_description: "Generate a full hackathon operating plan from a theme."
+  default_prompt: "Use $hackathon-in-a-box to build a full operating plan for this hackathon."

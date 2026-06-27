@@ -33,14 +33,23 @@ Only `SKILL.md` is required. Add `agents/openai.yaml` when the skill should have
 ## Adding A Skill
 
 1. Copy `templates/skill` to a new top-level folder.
-2. Rename the folder and update `SKILL.md`.
-3. Update `agents/openai.yaml` if present.
-4. Add the skill to the table in `README.md`.
-5. Run validation:
+2. Search for overlapping skills before writing a new one:
+
+```bash
+rg -n "your-domain|your-deliverable|your-workflow" */SKILL.md README.md
+```
+
+3. Rename the folder and update `SKILL.md`.
+4. Update `agents/openai.yaml` if present.
+5. Add the skill to the table in `README.md`.
+6. Run validation and duplicate checks:
 
 ```bash
 python3 scripts/validate_skills.py
+python3 scripts/check_duplicate_skills.py
 ```
+
+If the duplicate checker flags a pair, merge the skills, narrow their boundaries, or document the intentional overlap in `.duplicate-skills.json`.
 
 ## Quality Bar
 
@@ -61,3 +70,4 @@ PRs should include:
 - a short explanation of the skill or change
 - any example prompt used to test it
 - confirmation that `python3 scripts/validate_skills.py` passes
+- confirmation that `python3 scripts/check_duplicate_skills.py` passes

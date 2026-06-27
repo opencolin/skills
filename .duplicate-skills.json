@@ -1,0 +1,127 @@
+{
+  "threshold": 0.22,
+  "allowed_pairs": [
+    {
+      "skills": ["coral", "coral-create-source-spec"],
+      "reason": "Product family overlap is expected; coral queries sources while coral-create-source-spec writes manifests."
+    },
+    {
+      "skills": ["coral", "coral-review-source-spec"],
+      "reason": "Product family overlap is expected; coral queries sources while coral-review-source-spec reviews manifests."
+    },
+    {
+      "skills": ["coral-create-source-spec", "coral-review-source-spec"],
+      "reason": "Both concern Coral source specs, but one creates manifests and the other reviews them."
+    },
+    {
+      "skills": ["community-space-ops", "venue-event-calendar"],
+      "reason": "community-space-ops covers full venue/community operations; venue-event-calendar only builds the programming calendar."
+    },
+    {
+      "skills": ["developer-email-writer", "devrel-email-sequence"],
+      "reason": "developer-email-writer handles one-off email/newsletter copy; devrel-email-sequence builds a multi-email drip."
+    },
+    {
+      "skills": ["devrel-email-sequence", "event-brief-generator"],
+      "reason": "event-brief-generator includes a single event blast; devrel-email-sequence handles ongoing drip campaigns."
+    },
+    {
+      "skills": ["client-delivery-copilot", "meeting-to-momentum"],
+      "reason": "client-delivery-copilot creates project delivery plans; meeting-to-momentum extracts decisions and action items."
+    },
+    {
+      "skills": ["hackathon-in-a-box", "hackathon-rubric-builder"],
+      "reason": "hackathon-in-a-box plans an entire event; hackathon-rubric-builder focuses on judging and scoring."
+    },
+    {
+      "skills": ["content-engine-builder", "devrel-content-multiplier"],
+      "reason": "content-engine-builder is audience-agnostic; devrel-content-multiplier is specific to developer launches and demos."
+    },
+    {
+      "skills": ["agentic-engineering", "agentic-engineering-audit"],
+      "reason": "agentic-engineering is a build reference; agentic-engineering-audit scores an existing agent system."
+    },
+    {
+      "skills": ["agent-opportunity-audit", "business-workflow-decoder"],
+      "reason": "agent-opportunity-audit finds AI opportunities; business-workflow-decoder maps existing operations."
+    },
+    {
+      "skills": ["agent-deploy-kubeclaw", "nebius"],
+      "reason": "nebius is broad cloud operations; agent-deploy-kubeclaw is a specific Kubernetes deployment workflow."
+    },
+    {
+      "skills": ["nebius", "nebius-token-factory-integration"],
+      "reason": "nebius is broad cloud operations; nebius-token-factory-integration only wires LLM tools to Token Factory."
+    },
+    {
+      "skills": ["sponsor-marketplace-matcher", "sponsor-pitch-deck"],
+      "reason": "sponsor-marketplace-matcher finds target sponsors; sponsor-pitch-deck creates the pitch asset."
+    },
+    {
+      "skills": ["sponsor-marketplace-matcher", "sponsor-outreach-kit"],
+      "reason": "sponsor-marketplace-matcher produces the target list; sponsor-outreach-kit builds the sponsorship package and outreach."
+    },
+    {
+      "skills": ["event-recap-report", "sponsor-pitch-deck"],
+      "reason": "event-recap-report is post-event proof and renewal material; sponsor-pitch-deck is pre-event sales collateral."
+    },
+    {
+      "skills": ["event-recap-report", "sponsor-marketplace-matcher"],
+      "reason": "event-recap-report summarizes completed events; sponsor-marketplace-matcher identifies prospective sponsors before outreach."
+    },
+    {
+      "skills": ["event-recap-report", "hackathon-in-a-box"],
+      "reason": "event-recap-report creates post-event reporting; hackathon-in-a-box plans the full hackathon."
+    },
+    {
+      "skills": ["multi-event-radar", "venue-event-calendar"],
+      "reason": "multi-event-radar ranks external event opportunities; venue-event-calendar plans programming for one physical venue."
+    },
+    {
+      "skills": ["hackathon-in-a-box", "hackathon-orchestration"],
+      "reason": "hackathon-in-a-box is planning; hackathon-orchestration manages live event operations."
+    },
+    {
+      "skills": ["multi-event-radar", "sponsor-marketplace-matcher"],
+      "reason": "multi-event-radar decides where to attend or sponsor; sponsor-marketplace-matcher decides which sponsors to approach."
+    },
+    {
+      "skills": ["event-recap-report", "sponsor-outreach-kit"],
+      "reason": "event-recap-report is a proof artifact after an event; sponsor-outreach-kit prepares the sales package before outreach."
+    },
+    {
+      "skills": ["devrel-email-sequence", "sponsor-outreach-kit"],
+      "reason": "devrel-email-sequence writes developer-facing drips; sponsor-outreach-kit writes sponsor-facing sales outreach."
+    },
+    {
+      "skills": ["hackathon-orchestration", "hackathon-rubric-builder"],
+      "reason": "hackathon-orchestration handles live logistics; hackathon-rubric-builder creates judging criteria and scoring."
+    },
+    {
+      "skills": ["event-recap-report", "multi-event-radar"],
+      "reason": "event-recap-report looks backward at a finished event; multi-event-radar ranks future event opportunities."
+    }
+  ],
+  "known_duplicate_candidates": [
+    {
+      "skills": ["sponsor-outreach-kit", "sponsor-pitch-deck"],
+      "reason": "Likely merge candidate: keep sponsor-outreach-kit and fold in pricing/one-pager guidance from sponsor-pitch-deck."
+    },
+    {
+      "skills": ["devrel-strategy-builder", "devrel-strategy-doc"],
+      "reason": "Likely merge candidate: keep the newer builder and fold in OKRs, 90-day plan, and budget framework."
+    },
+    {
+      "skills": ["event-radar", "multi-event-radar"],
+      "reason": "Likely merge or router candidate: both rank events, with multi-event-radar scoped to city/region planning."
+    },
+    {
+      "skills": ["event-radar", "event-leads"],
+      "reason": "Likely boundary cleanup: event-radar includes lead scoring while event-leads handles CSV-based lead ranking."
+    },
+    {
+      "skills": ["event-brief-generator", "event-page-generator"],
+      "reason": "Likely merge or rename candidate: both produce event promotion copy from a rough event idea."
+    }
+  ]
+}

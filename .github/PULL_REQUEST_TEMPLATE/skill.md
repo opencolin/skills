@@ -8,8 +8,10 @@
 - [ ] Folder names match `name` in `SKILL.md`.
 - [ ] Frontmatter descriptions explain when the skill should be used.
 - [ ] Long references, scripts, and assets are split into the right folders.
+- [ ] I searched existing skills and avoided creating a duplicate.
 - [ ] No secrets, credentials, or private customer data are included.
 - [ ] `python3 scripts/validate_skills.py` passes.
+- [ ] `python3 scripts/check_duplicate_skills.py` passes.
 
 ## Test Prompt
 

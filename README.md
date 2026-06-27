@@ -126,10 +126,11 @@ Restart Codex after installing new skills.
 
 This repo is meant to be friendly to both humans and coding agents.
 
-Start with [CONTRIBUTING.md](CONTRIBUTING.md), copy the template in [`templates/skill`](templates/skill), then run:
+Start with [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md), search for overlap, copy the template in [`templates/skill`](templates/skill), then run:
 
 ```bash
 python3 scripts/validate_skills.py
+python3 scripts/check_duplicate_skills.py
 ```
 
 ## License

@@ -1,0 +1,58 @@
+{
+  "_comment": "Copy to config.json and edit per event. Everything sponsor-specific lives here so the scripts stay generic.",
+  "csv_glob": "~/Downloads/AI Engineer Happy Hour*Guests*.csv",
+  "engaged_statuses": ["approved", "pending_approval", "waitlist", "waitlisted", "on_waitlist"],
+  "status_map": {"approved": "going", "pending_approval": "pending", "waitlist": "waitlisted"},
+  "csv_columns": {
+    "name": "name",
+    "email": "email",
+    "company": "What company do you work for?",
+    "title": "What is your job title?",
+    "linkedin": "What is your LinkedIn profile?",
+    "status": "approval_status",
+    "ticket": "ticket_name"
+  },
+  "sponsors": [
+    {"name": "Nebius", "icp": "AI cloud / open-model inference / GPU / fine-tuning",
+     "fit": {"3": ["infra","platform","gpu","pretrain","fine-tun","inference","foundation model","ml platform","distributed","pytorch","cuda","training"],
+             "2": ["machine learning","ml engineer","ml ","ai engineer","research scientist","model","llm","deep learning","data engineer","mlops","ai research"],
+             "1": ["ai","research","scientist"]}},
+    {"name": "Tavily", "icp": "web search/extract/crawl API for AI agents",
+     "fit": {"3": ["agent","rag","retrieval","crawl","scrap","autonomous","web search"],
+             "2": ["search","research","browser","tool use","workflow","assistant","llm app","knowledge"],
+             "1": ["ai","llm","data"]}},
+    {"name": "CoPilotKit", "icp": "open-source framework for in-app AI copilots / agentic UIs",
+     "fit": {"3": ["frontend","front-end","full stack","fullstack","react","copilot","design engineer"],
+             "2": ["typescript","next.js","ui","ux","product engineer","web","app developer","assistant"],
+             "1": ["product","developer","software"]}},
+    {"name": "DataRobot", "icp": "enterprise/agentic AI platform, MLOps + governance",
+     "fit": {"3": ["data scientist","mlops","governance","predictive","model monitoring","analytics"],
+             "2": ["enterprise","risk","fraud","insurance","bank","finance","healthcare","compliance","business intelligence","data science"],
+             "1": ["data","ml","ai"]}}
+  ],
+  "sponsor_domains": ["nebius.com","tavily.com","copilotkit.ai","datarobot.com","nebius.builders"],
+  "sponsor_name_tokens": ["nebius","tavily","copilotkit","datarobot"],
+  "bigco_boost": {"DataRobot": 1},
+  "frontier_penalty": {"Nebius": -2},
+  "devtool_boost": ["Nebius","Tavily","CoPilotKit"],
+  "competitors": {
+    "Nebius": {"domains": ["akash.network","gmicloud.ai","inference.ai","coreweave.com","lambdalabs.com","lambda.ai","together.ai","fireworks.ai","modal.com","replicate.com","baseten.co","runpod.io","crusoe.ai","hyperbolic.xyz","anyscale.com","nscale.com","deepinfra.com","novita.ai","lepton.ai","groq.com","cerebras.net","sambanova.ai"],
+               "names": ["coreweave","lambda labs","gmi cloud","together ai","fireworks","baseten","runpod","crusoe","hyperbolic","anyscale","nscale","deepinfra","akash","cerebras","sambanova","groq"]},
+    "Tavily": {"domains": ["exa.ai","serper.dev","serpapi.com","you.com","perplexity.ai","firecrawl.dev","mendable.ai","zenrows.com","brightdata.com","apify.com","linkup.so","jina.ai","diffbot.com","parallel.ai"],
+               "names": ["exa ai","serpapi","perplexity","firecrawl","brightdata","bright data","zenrows","apify","linkup","diffbot"]},
+    "CoPilotKit": {"domains": ["assistant-ui.com","thesys.dev"], "names": ["assistant-ui","assistant ui","thesys"]},
+    "DataRobot": {"domains": ["h2o.ai","dataiku.com","domino.ai","dominodatalab.com","fiddler.ai","arize.com","abacus.ai","c3.ai","sas.com"],
+                  "names": ["h2o.ai","dataiku","domino data","fiddler","arize","abacus.ai","c3.ai"]}
+  },
+  "vc_domains": ["a16z.com","khoslaventures.com","dcvc.com","greylock.com","pear.vc","generalcatalyst.com","iconiqcapital.com","nvp.com","amplifypartners.com","crv.com","m12.vc","felicis.com","sequoiacap.com","accel.com","lightspeedvp.com","benchmark.com","foundersfund.com","indexventures.com","bvp.com","redpoint.com","gv.com","insightpartners.com","coatue.com","ggvc.com","mayfield.com","southparkcommons.com","firstround.com","initialized.com","craftventures.com","8vc.com","luxcapital.com","conviction.vc","unusual.vc","menlovc.com","kleinerperkins.com","bain.com","scale.vc","wing.vc","sapphireventures.com","battery.com"],
+  "vc_conflict": {"m12.vc": {"Nebius": 1}},
+  "bigco": ["google","alphabet","amazon","aws","microsoft","apple","meta","facebook","nvidia","oracle","ibm","intel","adobe","salesforce","sap","cisco","qualcomm","uber","stripe","walmart","wells fargo","jpmorgan","goldman","deloitte","accenture","samsung","sony","dell","vmware","paypal","linkedin","snap","palantir","snowflake","servicenow","workday","atlassian","shopify","coinbase","doordash","netflix","tesla","airbnb","zoominfo","optum","epam","databricks","bytedance","tiktok","ebay","visa","mastercard","cloudflare","datadog","twilio"],
+  "frontier_labs": ["openai","anthropic","deepmind","mistral","cohere","x.ai","xai","scale ai","scale.com"],
+  "devtool_ai": ["llamaindex","langchain","vapi","writer","hive ai","noveum","sourcy","crewai","vercel","supabase","pinecone","weaviate","qdrant","langflow","n8n","zapier","retool"],
+  "freemail": ["gmail.com","yahoo.com","hotmail.com","outlook.com","icloud.com","proton.me","protonmail.com","qq.com","163.com","me.com","aol.com","live.com","msn.com","pm.me","duck.com","hey.com","googlemail.com","ymail.com","appleid.com","privaterelay.appleid.com","mac.com","tutamail.com","naver.com"],
+  "multiplier_keywords": {
+    "title": ["devrel","developer advocate","developer relations","advocate","evangelist","community","head of community","content","creator","organizer","influencer"],
+    "company": ["ai tinkerers","latent space","community","devrel"]
+  },
+  "ui": {"accent": "0B2447"}
+}

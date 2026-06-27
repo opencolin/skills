@@ -1,0 +1,4 @@
+interface:
+  display_name: "Event Lead Ranker"
+  short_description: "Score, rank, deep-screen, and run approvals on event attendees per sponsor."
+  default_prompt: "Use $event-lead-ranker to score and rank this attendee CSV for our sponsors and tell me who to approve."

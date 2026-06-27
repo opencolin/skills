@@ -1,0 +1,35 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate skills
+        run: python3 scripts/validate_skills.py
+
+      - name: Trigger Vercel deployment
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL is not configured."
+            exit 1
+          fi
+
+          curl --fail --silent --show-error --request POST "$VERCEL_DEPLOY_HOOK_URL" > /tmp/vercel-deploy-response.json
+          echo "Vercel deploy hook accepted the deployment request."
+          {
+            echo "### Vercel deployment triggered"
+            echo
+            echo "The deploy hook accepted the request for commit \`${GITHUB_SHA}\`."
+          } >> "$GITHUB_STEP_SUMMARY"

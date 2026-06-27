@@ -99,6 +99,16 @@ Restart Codex after installing new skills.
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
 
+### Agent Infrastructure And Utilities
+
+| Skill | Description |
+|---|---|
+| [`nebius-token-factory-integration`](nebius-token-factory-integration/SKILL.md) | Wire any LLM tool to Nebius Token Factory with a verified smoke test and fallback strategy. |
+| [`agent-deploy-kubeclaw`](agent-deploy-kubeclaw/SKILL.md) | Deploy an AI agent to Nebius Managed Kubernetes via Helm with observability, autoscaling, and rollback. |
+| [`mcp-server-scaffold`](mcp-server-scaffold/SKILL.md) | Scaffold a security-first MCP server with auth, rate limits, audit logs, and typed tools. |
+| [`agent-identity-resolver`](agent-identity-resolver/SKILL.md) | Resolve and verify agent identities via AID v2 DNS discovery and signature verification. |
+| [`brand-visibility-tracker`](brand-visibility-tracker/SKILL.md) | Track brand share-of-voice across major LLM assistants over time with sentiment and competitor diff. |
+
 ## Contributing
 
 This repo is meant to be friendly to both humans and coding agents.

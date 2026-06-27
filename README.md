@@ -99,7 +99,7 @@ Restart Codex after installing new skills.
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
 
-### Agent Infrastructure And Utilities
+### Agent Infrastructure & Utilities
 
 | Skill | Description |
 |---|---|

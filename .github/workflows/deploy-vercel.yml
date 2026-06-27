@@ -26,7 +26,7 @@ jobs:
             exit 1
           fi
 
-          curl --fail --silent --show-error --request POST "$VERCEL_DEPLOY_HOOK_URL" > /tmp/vercel-deploy-response.json
+          curl --fail --silent --show-error "$VERCEL_DEPLOY_HOOK_URL" > /tmp/vercel-deploy-response.json
           echo "Vercel deploy hook accepted the deployment request."
           {
             echo "### Vercel deployment triggered"

@@ -1,37 +1,97 @@
 ---
 name: event-radar
-description: "Decide which events are worth attending and who to pitch there. Given a city, topic, time window, or a list of events, produces a ranked attend/skip recommendation with reasoning, plus a target list of people and companies worth meeting at each. Use this whenever the user is planning which conferences, meetups, hackathons, or summits to go to, asks 'is this event worth it', 'which events should I attend', 'who should I meet at', or wants to turn an event calendar into a prioritized schedule and outreach plan. Trigger for both the attend decision (Radar) and the who-to-pitch layer (Lead Intelligence)."
+description: Decide which events are worth attending and who to pitch there, or turn event attendees into a scored, deduped, CRM-ready lead list. Use when a user is choosing conferences, meetups, hackathons, or summits to attend, asks whether an event is worth it, wants target people or companies to meet, provides a Luma/Lu.ma URL or attendee CSV, wants to score event leads, dedupe attendees, diff against a CRM, or plan event follow-up.
 ---
 
 # Event Radar
 
-Two jobs in one: decide which events earn the user's time (Radar), and surface who is worth meeting at each (Lead Intelligence). Time and travel are the scarce resources, so every recommendation must justify the opportunity cost.
+Handle two event GTM jobs:
 
-## Operating principles
+- **Attend Radar**: rank which events deserve time, travel, and attention.
+- **Lead Intelligence**: score attendees or guests into a careful follow-up list.
 
-Rank by expected value to the user's actual goal (pipeline, hiring, partnerships, learning, visibility), not by event size or hype. Be concrete about why an event ranks where it does. When data is thin, search for the agenda, speaker list, and past-year attendee profile before judging; mark assumptions as `[assumption: ...]`. No emojis. No em dashes.
+## Operating Principles
 
-## Required output structure
+- Rank by expected value to the user's real goal: pipeline, hiring, partnerships, learning, visibility, recruiting, or ecosystem adoption.
+- Be concrete about why each event, attendee, or company ranks where it does.
+- When data is thin, search for agenda, speaker list, sponsors, attendee profile, or past-year signals; mark assumptions as `[assumption: ...]`.
+- Use consent-based follow-up. Do not enrich private emails or phone numbers.
+- Never auto-import low-confidence rows. Quarantine them.
 
-### 1. The goal frame
-One line restating what the user is optimizing for at events. If unstated, infer it and say so. Everything downstream ranks against this.
+## Workflow
 
-### 2. Event radar (ranked)
-For each event: name, date, location, cost (ticket plus travel estimate), and an Attend / Maybe / Skip call with a one-line reason tied to the goal. Rank Attend first. Call out the single highest-value event and why.
+1. Identify the mode:
+   - Use Attend Radar when the user asks which events to attend, where to go, whether an event is worth it, or who to meet there.
+   - Use Lead Intelligence when the user provides an event URL, attendee list, guest list, CRM/list, or asks to score/dedupe/import leads.
+2. Confirm the user's goal segment and success metric.
+3. Gather source data:
+   - Event list, city + date range, or rough event names for Attend Radar.
+   - Luma URL, attendee CSV, pasted guest list, or CRM/list diff for Lead Intelligence.
+4. Rank or score using visible, explainable signals.
+5. Produce a clear action plan, not just a summary.
 
-### 3. Per-event target list
-For each Attend (and strong Maybe), 5 to 10 people or companies worth meeting, why each fits the goal, and where to find them (speaking, sponsoring, likely attending). Flag anyone who is a competitor or a poor use of time.
+## Attend Radar Output
 
-### 4. The schedule
-A simple prioritized plan across the window: which to commit to, which to send someone else to or do remotely, and which to drop. Account for travel and recovery so the plan is realistic.
+```markdown
+# Event Radar
 
-### 5. Outreach starters
-For the top targets, a one-line, specific opener the user could send before or at the event. Personal and concrete, never templated.
+## Goal Frame
+<one line restating what the user is optimizing for>
 
-## Quality bar
+## Ranked Events
+| Rank | Event | Date | Location | Cost | Call | Reason |
+|---:|---|---|---|---:|---|---|
 
-Before returning, check: could the user book travel and walk in with a plan from this alone, knowing exactly why each event made the cut and who to find there? If the ranking is generic or the targets are vague, tighten it.
+## Per-Event Target List
+| Event | Person/Company | Why They Matter | Where To Find Them | Risk/Note |
+|---|---|---|---|---|
 
-## Closing line
+## Schedule
+<what to commit to, delegate, do remotely, or skip>
 
-> Want event strategy and warm intros from someone who runs the rooms? dablclub.com
+## Outreach Starters
+- <target>: <one-line opener>
+```
+
+## Lead Intelligence Output
+
+Produce three artifacts when files are appropriate:
+
+- `<event>-import.csv`: top-scored, ready for CRM import
+- `<event>-quarantine.csv`: needs human review, with `reason`
+- `<event>-summary.md`:
+
+```markdown
+# <Event Name> Event Radar Summary
+
+## Snapshot
+- Source:
+- Pulled:
+- Goal segment:
+- Threshold:
+
+## Score Histogram
+- High:
+- Quarantined:
+- Filtered out:
+
+## Top 10
+| Name | Title | Company | Score | Why |
+|---|---|---|---:|---|
+
+## Diff vs CRM
+- Net new:
+- Existing stale:
+- Existing fresh:
+
+## Recommended Follow-Up Window
+<48-72h with channel suggestion>
+```
+
+## Quality Bar
+
+- A user should be able to book travel, walk into the room, and know who to find.
+- A CRM import should include only high-confidence, consent-safe, explainably scored rows.
+- Every enriched field in summaries should point to the public source used.
+- If a guest list is gated, ask for an export instead of trying to bypass access controls.
+- Keep the recommendation specific enough to act on immediately.

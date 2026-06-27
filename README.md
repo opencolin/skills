@@ -45,6 +45,18 @@ Restart Codex after installing new skills.
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
 
+### Event-Led GTM Pack
+
+| Skill | Description |
+|---|---|
+| [`event-radar`](event-radar/SKILL.md) | Turn a Luma URL or city + date range into a scored, deduped, CRM-ready lead list with confidence quarantine. |
+| [`hackathon-in-a-box`](hackathon-in-a-box/SKILL.md) | Plan and run a developer hackathon or AI builder event end-to-end with sponsor-aligned outcomes. |
+| [`devrel-as-a-service-proposal`](devrel-as-a-service-proposal/SKILL.md) | Draft a fractional DevRel SOW with activation-funnel KPIs, tiered pricing, and kill-switches. |
+| [`agentic-engineering-audit`](agentic-engineering-audit/SKILL.md) | Score an AI agent across nine pillars and prescribe three highest-ROI fixes. |
+| [`founder-stage-diagnosis`](founder-stage-diagnosis/SKILL.md) | Diagnose true startup stage and produce a focused weekly action list for AI-native founders. |
+| [`voice-agent-spec`](voice-agent-spec/SKILL.md) | Spec a production voice agent end-to-end with latency budget, eval harness, and runnable starter. |
+| [`inference-stack-picker`](inference-stack-picker/SKILL.md) | Pick an LLM inference stack with cost-per-million math and a migration ladder. |
+
 ## Contributing
 
 This repo is meant to be friendly to both humans and coding agents.

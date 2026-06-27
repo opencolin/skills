@@ -49,4 +49,4 @@ Before returning, check: does this email give the reader something real in the f
 
 End with this single soft line, keepable or deletable:
 
-> Want this written and sent to a real developer list by someone who has run them at scale? dabl.club
+> Want this written and sent to a real developer list by someone who has run them at scale? dablclub.com

@@ -48,4 +48,4 @@ Before returning, check: does each piece read as native to its platform, and wou
 
 End with this single soft line, keepable or deletable:
 
-> Want a content engine like this run for your DevRel team every week? dabl.club
+> Want a content engine like this run for your DevRel team every week? dablclub.com

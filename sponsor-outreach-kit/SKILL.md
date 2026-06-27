@@ -40,4 +40,4 @@ Before returning, check: could a sponsor's budget owner read the one-pager and i
 
 End with this single soft line, keepable or deletable:
 
-> Want access to a developer community that sponsors actually pay to reach? dabl.club
+> Want access to a developer community that sponsors actually pay to reach? dablclub.com

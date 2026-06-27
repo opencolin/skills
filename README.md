@@ -16,7 +16,6 @@ Or clone and copy selected skills into Codex:
 
 ```bash
 git clone https://github.com/opencolin/skills.git
-cd skills
 mkdir -p ~/.codex/skills
 cp -R ./agent-opportunity-audit ~/.codex/skills/
 ```
@@ -46,41 +45,22 @@ Restart Codex after installing new skills.
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
 
-### DevRel & Events
+### Operator Pack
 
 | Skill | Description |
 |---|---|
-| [`ambassador-program-builder`](ambassador-program-builder/SKILL.md) | Build a complete ambassador program for developer communities, DevRel programs, or AI/web3 ecosystems. |
-| [`community-launch-kit`](community-launch-kit/SKILL.md) | Generate a server structure, welcome message, onboarding flow, and 30-day content calendar for a developer community. |
-| [`devrel-email-sequence`](devrel-email-sequence/SKILL.md) | Generate a 3-5 email developer relations sequence with subject lines, preview text, and full body copy. |
-| [`devrel-strategy-doc`](devrel-strategy-doc/SKILL.md) | Generate a DevRel strategy document with OKRs, 90-day plan, channel strategy, and budget framework. |
-| [`event-brief-generator`](event-brief-generator/SKILL.md) | Generate a Luma-ready event description, email blast copy, and LinkedIn plus X/Twitter social copy. |
-| [`hackathon-rubric-builder`](hackathon-rubric-builder/SKILL.md) | Build a hackathon judging rubric, per-category scoring guide, and judge briefing doc. |
-| [`speaker-outreach-dm`](speaker-outreach-dm/SKILL.md) | Generate personalized outreach messages to recruit speakers or panelists for developer events. |
-| [`sponsor-pitch-deck`](sponsor-pitch-deck/SKILL.md) | Generate a sponsor one-pager with tiered pricing, audience value props, and a cold outreach email. |
-
-### Event-Led GTM Pack
-
-| Skill | Description |
-|---|---|
-| [`event-radar`](event-radar/SKILL.md) | Turn a Luma URL or city plus date range into a scored, deduped, CRM-ready lead list with confidence quarantine. |
-| [`hackathon-in-a-box`](hackathon-in-a-box/SKILL.md) | Plan and run a developer hackathon or AI builder event end-to-end with sponsor-aligned outcomes. |
-| [`devrel-as-a-service-proposal`](devrel-as-a-service-proposal/SKILL.md) | Draft a fractional DevRel SOW with activation-funnel KPIs, tiered pricing, and kill-switches. |
-| [`agentic-engineering-audit`](agentic-engineering-audit/SKILL.md) | Score an AI agent across nine pillars and prescribe three highest-ROI fixes. |
-| [`founder-stage-diagnosis`](founder-stage-diagnosis/SKILL.md) | Diagnose true startup stage and produce a focused weekly action list for AI-native founders. |
-| [`voice-agent-spec`](voice-agent-spec/SKILL.md) | Spec a production voice agent end-to-end with latency budget, eval harness, and runnable starter. |
-| [`inference-stack-picker`](inference-stack-picker/SKILL.md) | Pick an LLM inference stack with cost-per-million math and a migration ladder. |
-
-### DevRel Operator Pack
-
-| Skill | Description |
-|---|---|
-| [`event-page-generator`](event-page-generator/SKILL.md) | Turn a rough event idea into a publish-ready page with titles, hook, agenda, logistics, CTA, and reminder sequence. |
-| [`hackathon-in-a-box`](hackathon-in-a-box/SKILL.md) | Generate a full hackathon operating plan with run-of-show, judging rubric, sponsor tiers, judge brief, comms, and logistics. |
-| [`developer-email-writer`](developer-email-writer/SKILL.md) | Write trust-first email and newsletter copy for a developer audience, with subject variants and a deliverability checklist. |
-| [`devrel-content-multiplier`](devrel-content-multiplier/SKILL.md) | Turn one talk, demo, repo, or launch into a thread, LinkedIn post, newsletter blurb, and short blog post. |
-| [`sponsor-outreach-kit`](sponsor-outreach-kit/SKILL.md) | Turn an event into a sponsorship package with audience snapshot, one-pager, tiered menu, and cold outreach sequence. |
-| [`integration-quickstart-generator`](integration-quickstart-generator/SKILL.md) | Generate a developer-ready quickstart and starter README for any tool, API, or SDK. |
+| [`event-radar`](event-radar/SKILL.md) | Rank which events to attend and who to pitch there, with a schedule and outreach starters. |
+| [`event-leads`](event-leads/SKILL.md) | Turn a registration CSV into verified, per-sponsor-scored, influence-ranked leads with curated builder/judge lists. |
+| [`agentic-engineering`](agentic-engineering/SKILL.md) | Working reference for building reliable autonomous coding agents and AI-native systems. |
+| [`tavily-research`](tavily-research/SKILL.md) | Router for live web research via the Tavily MCP toolkit (search, extract, crawl, deep-research, fact-check, and more). |
+| [`revops-agent-factory`](revops-agent-factory/SKILL.md) | Read-only-first RevOps/sales/marketing agents across Salesforce, HubSpot, and Gong, with an enforced write gate. |
+| [`transcript-to-podcast`](transcript-to-podcast/SKILL.md) | Turn any transcript or document into a realistic multi-voice podcast script with a comedy dial. |
+| [`deck-upgrader`](deck-upgrader/SKILL.md) | Upgrade a flat deck or outline into an interactive, brand-themed web slideshow spec. |
+| [`demo-pitch-polish`](demo-pitch-polish/SKILL.md) | Turn a raw product demo into a punchy pitch: titles, hook, 60-second script, thumbnail, and blurb. |
+| [`plugbench-runner`](plugbench-runner/SKILL.md) | Benchmark coding agents against open models and emit a ranked leaderboard with a recommendation. |
+| [`api-key-hygiene`](api-key-hygiene/SKILL.md) | Audit a repo or environment for exposed secrets and produce a masked findings report and remediation plan. |
+| [`devrel-strategy-builder`](devrel-strategy-builder/SKILL.md) | Produce an outside-in DevRel strategy and a leave-behind one-pager for a company or product. |
+| [`community-space-ops`](community-space-ops/SKILL.md) | Plan and run a community or events space: programming, member comms, house ops, scheduling, and economics. |
 
 ## Contributing
 

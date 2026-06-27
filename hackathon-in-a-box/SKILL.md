@@ -1,69 +1,93 @@
 ---
 name: hackathon-in-a-box
-description: Plan and run a developer hackathon, AI builder event, or sponsor-backed summit end-to-end. Produces run-of-show, judging rubric, sponsor deck outline, attendee comms, Discord/Slack channel structure, lead-scoring sheet, budget worksheet, and risk register. Use when a user wants to plan a hackathon, sponsor a builder event, run a developer event, write a judging rubric, draft event run-of-show, or critique an existing hackathon plan.
+description: Generate a complete operational plan for a developer hackathon, AI build day, code sprint, builder summit, or sponsor-backed competitive event. Produces event summary, run of show, judging rubric, prize and sponsor tiers, judge brief, participant comms, logistics checklist, lead capture guardrails, budget worksheet, and risk register. Use when the user is planning, organizing, pitching, or improving a hackathon or competitive builder event.
 ---
 
 # Hackathon In A Box
 
-Plan and operate a developer hackathon or AI builder event biased toward sponsor pipeline outcomes, not vanity attendance.
+Turn a theme, sponsor brief, or rough event concept into a complete hackathon operating plan that an organizer can run from top to bottom.
+
+## Operating Principles
+
+- Optimize the event around one outcome: recruiting, ecosystem adoption, signups, integrations shipped, qualified leads, content, or community growth.
+- Be specific about timing, ownership, decision points, and handoffs.
+- Default to a one-day format unless the user specifies a weekend, multi-day, hybrid, virtual, or async event.
+- Prefer working demos over slides, sponsor workshops over sponsor logos, fewer high-value prizes over many small prizes, and consent-based lead capture only.
+- Mark unknowns as `[assumption: ...]` and keep moving.
 
 ## Workflow
 
-1. Gather inputs: sponsor(s) and what they sell, theme, target audience and approximate count, total budget, format (in-person / hybrid / virtual; 24h / 48h / 1-week async), and the sponsor's primary success metric (signups, integrations shipped, qualified leads, PR, hires).
-2. Anchor every section to the success metric. If sponsor wants signups, weight the rubric, prizes, and comms toward signup-driving demos. Call this out explicitly.
-3. Produce a single plan document covering the sections in Output Format below.
-4. Use specific dates and times. Avoid placeholder ranges where a concrete number is more useful.
-5. Take positions: cash > swag, working demos > slides, fewer high-value prizes > many small ones, sponsor workshops > sponsor logos, consent-based lead capture only.
-6. Suggest venue and vendor *types* by city if known. Do not recommend specific named businesses unless verified.
+1. Gather inputs: theme, sponsor or host, target participant, city or format, expected headcount, budget, event length, technical stack, and primary success metric.
+2. Anchor every section to the success metric. If the sponsor wants signups, weight prizes, judging, and comms toward signup-driving demos.
+3. Produce the full operating plan in the output structure below.
+4. Use concrete times and owners. Avoid "morning" or "afternoon" when an hour is needed.
+5. Include quality gates for the two moments that most often go wrong: submission cutoff and demo logistics.
+6. Keep sponsor data rights explicit and consent-based.
 
 ## Output Format
 
-Produce `hackathon-plan-<theme>.md`:
-
 ```markdown
-# <Event Name> — Hackathon Plan
+# <Event Name> Hackathon Plan
+
+## Event Summary
+- Theme:
+- Target participant:
+- Optimized outcome:
 
 ## North-Star Goal
-<3–5 sentences tying everything to the sponsor's success metric.>
+<3-5 sentences tying the event plan to the success metric.>
 
-## Run of Show
+## Run Of Show
 | Time | Activity | Owner | Notes |
 |---|---|---|---|
-<T-30 days through T+14 days, hour-resolution on event days.>
+<T-30 days through T+14 days where useful; hour-level detail on event days.>
 
 ## Judging Rubric
-<4–6 dimensions weighted to 100 points, plus explicit anti-patterns to penalize: slide-only demos, no working code, off-theme, AI-slop pitches.>
+| Criterion | Weight | High Score Looks Like |
+|---|---:|---|
+<4-6 dimensions totaling exactly 100 points.>
 
-## Sponsor Deck Outline
-<10 slides max: why now, audience proof, tiered ask, what sponsor gets per tier, theme fit, logistics, past-event proof, team, risk + kill-switch, next steps.>
+Tie-break:
+Anti-patterns to penalize:
 
-## Comms Templates
-- Pre-event email sequence (T-21, T-7, T-1, day-of)
-- Discord/Slack channel structure
-- Bot prompts for team formation, check-ins, demo signup
-- Post-event thank-you with leaderboard + consent CTA
-- Sponsor recap email
+## Prize And Sponsor Tier Structure
+<Prize breakdown plus Title, Track, and Supporting sponsor tiers with concrete benefits.>
+
+## Judge Brief
+<Copy-paste brief covering the rubric, time commitment, demo flow, scoring sheet, and expectations.>
+
+## Participant Comms Timeline
+- Registration confirmation:
+- T-minus 1 week:
+- T-minus 1 day:
+- Day-of:
+- Post-event recap:
+
+## Logistics Checklist
+- Venue and access:
+- Food, water, and power:
+- Wifi and dev environment:
+- Hardware and credentials:
+- Signage:
+- AV and demo flow:
 
 ## Lead Scoring Sheet
-<CSV schema and a one-paragraph guide on filling it during demos.>
 attendee_name, team, project_title, github_url, demo_video_url, technical_depth, theme_fit, contacted_consent, sponsor_priority_1_5, notes
 
 ## Budget Worksheet
-| Category | $ | Notes |
+| Category | Amount | Notes |
 |---|---:|---|
-<Venue, AV, food per meal, prizes split, swag, staffing, contingency (>=10%).>
 
 ## Risk Register
 | Risk | Mitigation |
 |---|---|
-<Top 5: attendance miss, sponsor pullout, API outage, judging dispute, no-show keynote.>
+<Top risks: attendance miss, sponsor pullout, API outage, judging dispute, no-show keynote, demo delays.>
 ```
 
 ## Quality Bar
 
-- Every section ties back to the sponsor's stated success metric.
-- Run of show uses concrete times, not "morning" or "afternoon."
 - Rubric weights add to exactly 100.
-- Budget categories sum to the stated budget within 5%.
-- Comms templates are copy-pasteable plain text, not vague guidance.
-- No extractive lead capture. Consent-based only.
+- Budget categories sum to the stated budget within 5% when a budget is provided.
+- Comms templates are copy-pasteable plain text.
+- Lead capture is consent-based.
+- A first-time organizer could run the event without inventing the missing operating layer.

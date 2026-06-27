@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>opencolin/skills - Agent Skills Library</title>
+    <meta
+      name="description"
+      content="Install reusable AI agent skills for operators, DevRel practitioners, developer marketers, founders, and coding agents who ship."
+    />
+    <meta property="og:title" content="The Agent Skills Library for Operators Who Actually Ship" />
+    <meta
+      property="og:description"
+      content="31 reusable AI skills for SOPs, event briefs, sponsor pitches, GTM docs, agent audits, quickstarts, and developer community work."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opencolin.github.io/skills/" />
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23ffffff"/><rect x="8" y="8" width="48" height="48" fill="none" stroke="%23101217" stroke-width="5"/><path d="M24 22l10 10-10 10" fill="none" stroke="%231d4fff" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/></svg>'
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="opencolin skills home">
+        <span class="brand-mark" aria-hidden="true">></span>
+        <span>opencolin/<strong>skills</strong></span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#library">Library</a>
+        <a href="#proof">Proof</a>
+        <a href="#contribute">Contribute</a>
+        <a href="https://github.com/opencolin/skills">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="mono accent">// 31 AI agent skills for real work</p>
+          <h1>The Agent Skills Library for Operators Who Actually Ship</h1>
+          <p class="lede">
+            Stop rebuilding SOPs, event briefs, sponsor pitches, agent audits, quickstarts, and GTM docs
+            from scratch. Install reusable skills built for real business workflows, developer communities,
+            and AI-native teams.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install">Install the skills</a>
+            <a class="button secondary" href="#library">Browse the library</a>
+          </div>
+          <div class="micro-proof mono" aria-label="Repository metadata">
+            <span>Star on GitHub</span>
+            <span>Fork friendly</span>
+            <span>Apache 2.0</span>
+          </div>
+        </div>
+
+        <aside class="terminal-card" aria-label="Terminal preview">
+          <div class="terminal-line green">$ whoami</div>
+          <div>operator shipping outcomes</div>
+          <pre aria-hidden="true">
+[ brief ] -> [ skill ]
+     |           |
+[ notes ] -> [ shipped ]
+          </pre>
+          <p class="terminal-callout">31 skills. One install. Ship more.</p>
+          <div class="terminal-line green">$ _</div>
+        </aside>
+      </section>
+
+      <section id="install" class="install-strip section-shell" aria-label="Install command">
+        <div>
+          <span class="green">$</span>
+          <code id="installCommand">npx skills add opencolin/skills</code>
+        </div>
+        <button class="copy-button" type="button" data-copy="#installCommand">Copy</button>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-heading">
+          <h2>Skill Packs Overview</h2>
+          <p class="mono accent">// 5 packs, 31 skills</p>
+        </div>
+        <div class="pack-grid" aria-label="Skill pack overview">
+          <article class="pack-card">
+            <div class="pack-icon">></div>
+            <h3>AI Operator Field Kit</h3>
+            <p class="mono">8 skills</p>
+            <p>Run better with SOPs, audits, playbooks, client delivery docs, and reusable skill writing.</p>
+          </article>
+          <article class="pack-card">
+            <div class="pack-icon">#</div>
+            <h3>DevRel & Events</h3>
+            <p class="mono">8 skills</p>
+            <p>Build community programs, event briefs, sponsor assets, speaker outreach, and email sequences.</p>
+          </article>
+          <article class="pack-card">
+            <div class="pack-icon">+</div>
+            <h3>Event-Led GTM</h3>
+            <p class="mono">7 skills</p>
+            <p>Score event leads, plan hackathons, scope DevRel offers, audit agents, and pick inference stacks.</p>
+          </article>
+          <article class="pack-card">
+            <div class="pack-icon">@</div>
+            <h3>DevRel Operator Pack</h3>
+            <p class="mono">6 skills</p>
+            <p>Generate event pages, developer emails, content multipliers, sponsorship kits, and quickstarts.</p>
+          </article>
+          <article class="pack-card">
+            <div class="pack-icon">db</div>
+            <h3>Coral Data</h3>
+            <p class="mono">3 skills</p>
+            <p>Query connected sources, create source specs, and review source manifests for agent data work.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="library" class="section-shell library-section">
+        <div class="section-heading">
+          <h2>Skill Library</h2>
+          <p class="mono accent">// all current skills</p>
+        </div>
+
+        <div class="library-controls" aria-label="Skill pack filters">
+          <button class="filter is-active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="operator">AI Operators</button>
+          <button class="filter" type="button" data-filter="devrel">DevRel & Events</button>
+          <button class="filter" type="button" data-filter="gtm">Event-Led GTM</button>
+          <button class="filter" type="button" data-filter="devrel-operator">DevRel Operator</button>
+          <button class="filter" type="button" data-filter="coral">Coral</button>
+        </div>
+
+        <div class="skill-groups">
+          <section class="skill-group" data-pack="operator">
+            <h3>AI Operator Field Kit <span>8</span></h3>
+            <ol class="skill-list">
+              <li><a href="agent-opportunity-audit/SKILL.md">agent-opportunity-audit</a><span>Find practical AI agent opportunities.</span></li>
+              <li><a href="business-workflow-decoder/SKILL.md">business-workflow-decoder</a><span>Map messy work into reusable workflows.</span></li>
+              <li><a href="sop-from-screen-recording/SKILL.md">sop-from-screen-recording</a><span>Turn walkthroughs into clean SOPs.</span></li>
+              <li><a href="offer-sharpening-agent/SKILL.md">offer-sharpening-agent</a><span>Clarify audience, pain, proof, and CTA.</span></li>
+              <li><a href="client-delivery-copilot/SKILL.md">client-delivery-copilot</a><span>Turn briefs into delivery plans.</span></li>
+              <li><a href="content-engine-builder/SKILL.md">content-engine-builder</a><span>Repurpose ideas into a content engine.</span></li>
+              <li><a href="meeting-to-momentum/SKILL.md">meeting-to-momentum</a><span>Extract decisions, tasks, and follow-ups.</span></li>
+              <li><a href="ai-skill-writer/SKILL.md">ai-skill-writer</a><span>Turn recurring work into reusable skills.</span></li>
+            </ol>
+          </section>
+
+          <section class="skill-group" data-pack="devrel">
+            <h3>DevRel & Events <span>8</span></h3>
+            <ol class="skill-list">
+              <li><a href="ambassador-program-builder/SKILL.md">ambassador-program-builder</a><span>Build ambassador programs.</span></li>
+              <li><a href="community-launch-kit/SKILL.md">community-launch-kit</a><span>Launch developer communities.</span></li>
+              <li><a href="devrel-email-sequence/SKILL.md">devrel-email-sequence</a><span>Draft 3-5 email DevRel sequences.</span></li>
+              <li><a href="devrel-strategy-doc/SKILL.md">devrel-strategy-doc</a><span>Create DevRel strategy and 90-day plans.</span></li>
+              <li><a href="event-brief-generator/SKILL.md">event-brief-generator</a><span>Generate Luma-ready event briefs.</span></li>
+              <li><a href="hackathon-rubric-builder/SKILL.md">hackathon-rubric-builder</a><span>Build judging rubrics and judge briefs.</span></li>
+              <li><a href="speaker-outreach-dm/SKILL.md">speaker-outreach-dm</a><span>Recruit speakers with personalized DMs.</span></li>
+              <li><a href="sponsor-pitch-deck/SKILL.md">sponsor-pitch-deck</a><span>Create sponsor one-pagers and pitch emails.</span></li>
+            </ol>
+          </section>
+
+          <section class="skill-group" data-pack="gtm">
+            <h3>Event-Led GTM Pack <span>7</span></h3>
+            <ol class="skill-list">
+              <li><a href="event-radar/SKILL.md">event-radar</a><span>Score event attendees into lead lists.</span></li>
+              <li><a href="hackathon-in-a-box/SKILL.md">hackathon-in-a-box</a><span>Run a full hackathon operating system.</span></li>
+              <li><a href="devrel-as-a-service-proposal/SKILL.md">devrel-as-a-service-proposal</a><span>Scope fractional DevRel SOWs.</span></li>
+              <li><a href="agentic-engineering-audit/SKILL.md">agentic-engineering-audit</a><span>Audit agent architecture and reliability.</span></li>
+              <li><a href="founder-stage-diagnosis/SKILL.md">founder-stage-diagnosis</a><span>Focus AI-native founders by stage.</span></li>
+              <li><a href="voice-agent-spec/SKILL.md">voice-agent-spec</a><span>Spec production voice agents.</span></li>
+              <li><a href="inference-stack-picker/SKILL.md">inference-stack-picker</a><span>Choose inference stacks with cost math.</span></li>
+            </ol>
+          </section>
+
+          <section class="skill-group" data-pack="devrel-operator">
+            <h3>DevRel Operator Pack <span>6</span></h3>
+            <ol class="skill-list">
+              <li><a href="event-page-generator/SKILL.md">event-page-generator</a><span>Publish event pages from rough ideas.</span></li>
+              <li><a href="developer-email-writer/SKILL.md">developer-email-writer</a><span>Write trust-first developer emails.</span></li>
+              <li><a href="devrel-content-multiplier/SKILL.md">devrel-content-multiplier</a><span>Turn one asset into multi-channel content.</span></li>
+              <li><a href="sponsor-outreach-kit/SKILL.md">sponsor-outreach-kit</a><span>Build sponsorship outreach packages.</span></li>
+              <li><a href="integration-quickstart-generator/SKILL.md">integration-quickstart-generator</a><span>Create developer quickstarts.</span></li>
+              <li><a href="hackathon-in-a-box/SKILL.md">hackathon-in-a-box</a><span>Plan event ops, rubrics, comms, and logistics.</span></li>
+            </ol>
+          </section>
+
+          <section class="skill-group" data-pack="coral">
+            <h3>Coral Data <span>3</span></h3>
+            <ol class="skill-list">
+              <li><a href="coral/SKILL.md">coral</a><span>Query live connected sources through Coral MCP.</span></li>
+              <li><a href="coral-create-source-spec/SKILL.md">coral-create-source-spec</a><span>Create custom Coral source specs.</span></li>
+              <li><a href="coral-review-source-spec/SKILL.md">coral-review-source-spec</a><span>Review source manifests and source PRs.</span></li>
+            </ol>
+          </section>
+        </div>
+      </section>
+
+      <section id="proof" class="proof section-shell">
+        <div class="section-heading">
+          <h2>Built from a decade in the trenches</h2>
+          <p class="mono accent">// proven impact</p>
+        </div>
+        <div class="proof-grid">
+          <div class="logo-cloud" aria-label="Experience logos">
+            <span>Cisco Meraki</span>
+            <span>ConsenSys</span>
+            <span>Sumo Logic</span>
+            <span>Akash</span>
+            <span>Nebius</span>
+          </div>
+          <div class="stat"><strong>10+</strong><span>Years in DevRel and developer ecosystems</span></div>
+          <div class="stat"><strong>85K+</strong><span>Developers reached</span></div>
+          <div class="stat"><strong>300+</strong><span>Events delivered</span></div>
+          <div class="stat"><strong>20+</strong><span>Countries engaged</span></div>
+        </div>
+      </section>
+
+      <section class="section-shell audience">
+        <div class="section-heading">
+          <h2>Who It's For</h2>
+          <p class="mono accent">// made for builders and operators</p>
+        </div>
+        <div class="audience-grid">
+          <article>
+            <h3>Developer Marketers</h3>
+            <p>Ship campaigns, events, content, and docs that technical audiences actually trust.</p>
+          </article>
+          <article>
+            <h3>Founders and CEOs</h3>
+            <p>Move faster with GTM assets, pitches, audits, and operator workflows that work.</p>
+          </article>
+          <article>
+            <h3>DevRel Practitioners</h3>
+            <p>Run programs, communities, hackathons, sponsorships, and developer email without blank pages.</p>
+          </article>
+          <article>
+            <h3>AI Coding Agents</h3>
+            <p>Install specific workflows so agents can generate, evaluate, and improve outcomes.</p>
+          </article>
+          <article>
+            <h3>Operators</h3>
+            <p>Standardize workflows, reduce manual toil, and turn repeated work into reusable systems.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contribute" class="contribute section-shell">
+        <div>
+          <p class="mono accent">// contribute</p>
+          <h2>Open source. Community powered.</h2>
+          <p>
+            Help grow the library. Add new skills, improve existing ones, or fix docs. Every contribution
+            helps agents ship better work.
+          </p>
+          <div class="link-list mono">
+            <a href="CONTRIBUTING.md">Read contributing.md</a>
+            <a href="https://github.com/opencolin/skills/issues">Open an issue</a>
+            <a href="https://github.com/opencolin/skills/pulls">Submit a pull request</a>
+          </div>
+        </div>
+        <div class="mini-terminal">
+          <div><span class="green">$</span> git clone https://github.com/opencolin/skills.git</div>
+          <div><span class="green">$</span> cd skills</div>
+          <div><span class="green">$</span> cp -R templates/skill my-new-skill</div>
+          <div><span class="green">$</span> python3 scripts/validate_skills.py</div>
+          <p>Ship skills. Help operators ship more.</p>
+        </div>
+      </section>
+
+      <section class="final-cta section-shell">
+        <div>
+          <h2>Stop rebuilding. Start shipping.</h2>
+          <p>Install the 31 skills and get to impact faster.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#install">Install the skills</a>
+          <a class="button dark" href="#library">Browse the library</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section-shell">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true">></span>
+        <span>opencolin/<strong>skills</strong></span>
+      </a>
+      <div class="footer-links">
+        <a href="#library">Library</a>
+        <a href="CONTRIBUTING.md">Contribute</a>
+        <a href="LICENSE">License</a>
+        <a href="https://github.com/opencolin/skills">GitHub</a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

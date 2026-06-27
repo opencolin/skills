@@ -1,0 +1,34 @@
+const copyButtons = document.querySelectorAll("[data-copy]");
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const target = document.querySelector(button.dataset.copy);
+    if (!target) return;
+
+    try {
+      await navigator.clipboard.writeText(target.textContent.trim());
+      const original = button.textContent;
+      button.textContent = "Copied";
+      window.setTimeout(() => {
+        button.textContent = original;
+      }, 1400);
+    } catch {
+      button.textContent = "Copy failed";
+    }
+  });
+});
+
+const filters = document.querySelectorAll("[data-filter]");
+const groups = document.querySelectorAll("[data-pack]");
+
+filters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    const selected = filter.dataset.filter;
+
+    filters.forEach((item) => item.classList.toggle("is-active", item === filter));
+    groups.forEach((group) => {
+      const visible = selected === "all" || group.dataset.pack === selected;
+      group.hidden = !visible;
+    });
+  });
+});

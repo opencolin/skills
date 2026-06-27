@@ -11,7 +11,7 @@
     <meta property="og:title" content="The Agent Skills Library for Operators Who Actually Ship" />
     <meta
       property="og:description"
-      content="52 reusable AI skills for SOPs, event briefs, sponsor pitches, event operations, agent infrastructure, quickstarts, and developer community work."
+      content="55 reusable AI skills for SOPs, event briefs, sponsor pitches, event operations, product integrations, agent infrastructure, quickstarts, and developer community work."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://opencolin.github.io/skills/" />
@@ -38,7 +38,7 @@
     <main id="top">
       <section class="hero section-shell">
         <div class="hero-copy">
-          <p class="mono accent">// 52 AI agent skills for real work</p>
+          <p class="mono accent">// 55 AI agent skills for real work</p>
           <h1>The Agent Skills Library for Operators Who Actually Ship</h1>
           <p class="lede">
             Stop rebuilding SOPs, event briefs, sponsor pitches, agent audits, quickstarts, and GTM docs
@@ -64,7 +64,7 @@
      |           |
 [ notes ] -> [ shipped ]
           </pre>
-          <p class="terminal-callout">52 skills. One install. Ship more.</p>
+          <p class="terminal-callout">55 skills. One install. Ship more.</p>
           <div class="terminal-line green">$ _</div>
         </aside>
       </section>
@@ -80,7 +80,7 @@
       <section class="section-shell">
         <div class="section-heading">
           <h2>Skill Packs Overview</h2>
-          <p class="mono accent">// 8 packs, 52 unique skills</p>
+          <p class="mono accent">// 8 packs, 55 unique skills</p>
         </div>
         <div class="pack-grid" aria-label="Skill pack overview">
           <article class="pack-card">
@@ -108,22 +108,22 @@
             <p>Generate event pages, developer emails, content multipliers, sponsorship kits, and quickstarts.</p>
           </article>
           <article class="pack-card">
-            <div class="pack-icon">db</div>
-            <h3>Coral Data</h3>
-            <p class="mono">3 skills</p>
-            <p>Query connected sources, create source specs, and review source manifests for agent data work.</p>
+            <div class="pack-icon">co</div>
+            <h3>Company &amp; Product Skills</h3>
+            <p class="mono">9 skills</p>
+            <p>Use product-specific workflows for Coral, Nebius, ConTree, Vapi, Tavily, and KubeClaw.</p>
           </article>
           <article class="pack-card">
             <div class="pack-icon">ops</div>
             <h3>Operator Pack</h3>
-            <p class="mono">12 skills</p>
-            <p>Run event radar, RevOps agents, research, deck upgrades, benchmarks, and community spaces.</p>
+            <p class="mono">11 skills</p>
+            <p>Run event radar, RevOps agents, deck upgrades, benchmarks, and community spaces.</p>
           </article>
           <article class="pack-card">
             <div class="pack-icon">id</div>
             <h3>Agent Infrastructure &amp; Utilities</h3>
-            <p class="mono">5 skills</p>
-            <p>Deploy agents, resolve identities, scaffold MCP servers, track visibility, and wire Nebius.</p>
+            <p class="mono">3 skills</p>
+            <p>Scaffold MCP servers, resolve agent identities, and track AI visibility.</p>
           </article>
           <article class="pack-card">
             <div class="pack-icon">cal</div>
@@ -146,7 +146,7 @@
           <button class="filter" type="button" data-filter="devrel">DevRel & Events</button>
           <button class="filter" type="button" data-filter="gtm">Event-Led GTM</button>
           <button class="filter" type="button" data-filter="devrel-operator">DevRel Operator</button>
-          <button class="filter" type="button" data-filter="coral">Coral</button>
+          <button class="filter" type="button" data-filter="product">Products</button>
           <button class="filter" type="button" data-filter="operator-pack">Operator Pack</button>
           <button class="filter" type="button" data-filter="agent-infra">Agent Infra</button>
           <button class="filter" type="button" data-filter="event-ops">Event Ops</button>
@@ -204,22 +204,27 @@
             </ol>
           </section>
 
-          <section class="skill-group" data-pack="coral">
-            <h3>Coral Data <span>3</span></h3>
+          <section class="skill-group" data-pack="product">
+            <h3>Company &amp; Product Skills <span>9</span></h3>
             <ol class="skill-list">
               <li><a href="coral/SKILL.md">coral</a><span>Query live connected sources through Coral MCP.</span></li>
               <li><a href="coral-create-source-spec/SKILL.md">coral-create-source-spec</a><span>Create custom Coral source specs.</span></li>
               <li><a href="coral-review-source-spec/SKILL.md">coral-review-source-spec</a><span>Review source manifests and source PRs.</span></li>
+              <li><a href="nebius/SKILL.md">nebius</a><span>Manage Nebius AI Cloud infrastructure.</span></li>
+              <li><a href="nebius-token-factory-integration/SKILL.md">nebius-token-factory-integration</a><span>Wire LLM tools to Nebius Token Factory.</span></li>
+              <li><a href="agent-deploy-kubeclaw/SKILL.md">agent-deploy-kubeclaw</a><span>Deploy agents to Nebius Managed Kubernetes.</span></li>
+              <li><a href="contree/SKILL.md">contree</a><span>Run branchable sandboxed containers.</span></li>
+              <li><a href="tavily-research/SKILL.md">tavily-research</a><span>Route live web research through Tavily MCP.</span></li>
+              <li><a href="vapi/SKILL.md">vapi</a><span>Manage Vapi voice-agent workflows.</span></li>
             </ol>
           </section>
 
           <section class="skill-group" data-pack="operator-pack">
-            <h3>Operator Pack <span>12</span></h3>
+            <h3>Operator Pack <span>11</span></h3>
             <ol class="skill-list">
               <li><a href="event-radar/SKILL.md">event-radar</a><span>Rank events and score event leads.</span></li>
               <li><a href="event-leads/SKILL.md">event-leads</a><span>Turn registration CSVs into sponsor-scored leads.</span></li>
               <li><a href="agentic-engineering/SKILL.md">agentic-engineering</a><span>Build reliable autonomous coding agents.</span></li>
-              <li><a href="tavily-research/SKILL.md">tavily-research</a><span>Route live web research through Tavily MCP.</span></li>
               <li><a href="revops-agent-factory/SKILL.md">revops-agent-factory</a><span>Design read-only-first RevOps agents.</span></li>
               <li><a href="transcript-to-podcast/SKILL.md">transcript-to-podcast</a><span>Convert transcripts into podcast scripts.</span></li>
               <li><a href="deck-upgrader/SKILL.md">deck-upgrader</a><span>Upgrade decks into interactive slideshow specs.</span></li>
@@ -232,10 +237,8 @@
           </section>
 
           <section class="skill-group" data-pack="agent-infra">
-            <h3>Agent Infrastructure &amp; Utilities <span>5</span></h3>
+            <h3>Agent Infrastructure &amp; Utilities <span>3</span></h3>
             <ol class="skill-list">
-              <li><a href="nebius-token-factory-integration/SKILL.md">nebius-token-factory-integration</a><span>Wire LLM tools to Nebius Token Factory.</span></li>
-              <li><a href="agent-deploy-kubeclaw/SKILL.md">agent-deploy-kubeclaw</a><span>Deploy agents to Nebius Managed Kubernetes.</span></li>
               <li><a href="mcp-server-scaffold/SKILL.md">mcp-server-scaffold</a><span>Scaffold secure, typed MCP servers.</span></li>
               <li><a href="agent-identity-resolver/SKILL.md">agent-identity-resolver</a><span>Resolve and verify AID v2 agent identities.</span></li>
               <li><a href="brand-visibility-tracker/SKILL.md">brand-visibility-tracker</a><span>Track brand share-of-voice across LLMs.</span></li>
@@ -330,7 +333,7 @@
       <section class="final-cta section-shell">
         <div>
           <h2>Stop rebuilding. Start shipping.</h2>
-          <p>Install the 52 skills and get to impact faster.</p>
+          <p>Install the 55 skills and get to impact faster.</p>
         </div>
         <div class="hero-actions">
           <a class="button primary" href="#install">Install the skills</a>

@@ -81,7 +81,6 @@ Restart Codex after installing new skills.
 | [`event-radar`](event-radar/SKILL.md) | Rank events worth attending and score event leads for follow-up. |
 | [`event-leads`](event-leads/SKILL.md) | Turn a registration CSV into verified, per-sponsor-scored, influence-ranked leads. |
 | [`agentic-engineering`](agentic-engineering/SKILL.md) | Working reference for building reliable autonomous coding agents and AI-native systems. |
-| [`tavily-research`](tavily-research/SKILL.md) | Router for live web research via the Tavily MCP toolkit. |
 | [`revops-agent-factory`](revops-agent-factory/SKILL.md) | Read-only-first RevOps, sales, and marketing agents with an enforced write gate. |
 | [`transcript-to-podcast`](transcript-to-podcast/SKILL.md) | Turn any transcript or document into a realistic multi-voice podcast script. |
 | [`deck-upgrader`](deck-upgrader/SKILL.md) | Upgrade a flat deck or outline into an interactive, brand-themed web slideshow spec. |
@@ -91,20 +90,24 @@ Restart Codex after installing new skills.
 | [`devrel-strategy-builder`](devrel-strategy-builder/SKILL.md) | Produce an outside-in DevRel strategy and leave-behind one-pager. |
 | [`community-space-ops`](community-space-ops/SKILL.md) | Plan and run a community or events space: programming, member comms, ops, scheduling, and economics. |
 
-### Coral
+### Company & Product Skills
 
 | Skill | Description |
 |---|---|
 | [`coral`](coral/SKILL.md) | Query live sources through Coral MCP. |
 | [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
 | [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
+| [`nebius`](nebius/SKILL.md) | Manage Nebius AI Cloud infrastructure, GPUs, serverless endpoints, VMs, Kubernetes, and Token Factory workflows. |
+| [`nebius-token-factory-integration`](nebius-token-factory-integration/SKILL.md) | Wire any LLM tool to Nebius Token Factory with a verified smoke test and fallback strategy. |
+| [`agent-deploy-kubeclaw`](agent-deploy-kubeclaw/SKILL.md) | Deploy an AI agent to Nebius Managed Kubernetes via Helm with observability, autoscaling, and rollback. |
+| [`contree`](contree/SKILL.md) | Use ConTree branchable sandboxed containers for isolated code execution, checkpoints, and parallel paths. |
+| [`tavily-research`](tavily-research/SKILL.md) | Route live web research through the Tavily MCP toolkit. |
+| [`vapi`](vapi/SKILL.md) | Manage Vapi voice agents, calls, phone numbers, tools, and webhooks. |
 
 ### Agent Infrastructure & Utilities
 
 | Skill | Description |
 |---|---|
-| [`nebius-token-factory-integration`](nebius-token-factory-integration/SKILL.md) | Wire any LLM tool to Nebius Token Factory with a verified smoke test and fallback strategy. |
-| [`agent-deploy-kubeclaw`](agent-deploy-kubeclaw/SKILL.md) | Deploy an AI agent to Nebius Managed Kubernetes via Helm with observability, autoscaling, and rollback. |
 | [`mcp-server-scaffold`](mcp-server-scaffold/SKILL.md) | Scaffold a security-first MCP server with auth, rate limits, audit logs, and typed tools. |
 | [`agent-identity-resolver`](agent-identity-resolver/SKILL.md) | Resolve and verify agent identities via AID v2 DNS discovery and signature verification. |
 | [`brand-visibility-tracker`](brand-visibility-tracker/SKILL.md) | Track brand share-of-voice across major LLM assistants over time with sentiment and competitor diff. |

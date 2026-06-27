@@ -58,6 +58,18 @@ Restart Codex after installing new skills.
 | [`speaker-outreach-dm`](speaker-outreach-dm/SKILL.md) | Generate 3 personalized cold outreach messages to recruit speakers or panelists for developer events across iMessage, LinkedIn, Twitter/X, or email. |
 | [`sponsor-pitch-deck`](sponsor-pitch-deck/SKILL.md) | Generate a sponsor one-pager with tiered pricing, audience value props, and a cold outreach email for a developer event, community, or hackathon. |
 
+### Event-Led GTM Pack
+
+| Skill | Description |
+|---|---|
+| [`event-radar`](event-radar/SKILL.md) | Turn a Luma URL or city + date range into a scored, deduped, CRM-ready lead list with confidence quarantine. |
+| [`hackathon-in-a-box`](hackathon-in-a-box/SKILL.md) | Plan and run a developer hackathon or AI builder event end-to-end with sponsor-aligned outcomes. |
+| [`devrel-as-a-service-proposal`](devrel-as-a-service-proposal/SKILL.md) | Draft a fractional DevRel SOW with activation-funnel KPIs, tiered pricing, and kill-switches. |
+| [`agentic-engineering-audit`](agentic-engineering-audit/SKILL.md) | Score an AI agent across nine pillars and prescribe three highest-ROI fixes. |
+| [`founder-stage-diagnosis`](founder-stage-diagnosis/SKILL.md) | Diagnose true startup stage and produce a focused weekly action list for AI-native founders. |
+| [`voice-agent-spec`](voice-agent-spec/SKILL.md) | Spec a production voice agent end-to-end with latency budget, eval harness, and runnable starter. |
+| [`inference-stack-picker`](inference-stack-picker/SKILL.md) | Pick an LLM inference stack with cost-per-million math and a migration ladder. |
+
 ## Contributing
 
 This repo is meant to be friendly to both humans and coding agents.

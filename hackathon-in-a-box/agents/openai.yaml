@@ -1,0 +1,5 @@
+---
+interface:
+  display_name: "Hackathon In A Box"
+  short_description: "Plan a developer hackathon end-to-end with sponsor-aligned outcomes."
+  default_prompt: "Use $hackathon-in-a-box to plan this hackathon or builder event."

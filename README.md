@@ -109,6 +109,16 @@ Restart Codex after installing new skills.
 | [`agent-identity-resolver`](agent-identity-resolver/SKILL.md) | Resolve and verify agent identities via AID v2 DNS discovery and signature verification. |
 | [`brand-visibility-tracker`](brand-visibility-tracker/SKILL.md) | Track brand share-of-voice across major LLM assistants over time with sentiment and competitor diff. |
 
+### Event Operations
+
+| Skill | Description |
+|---|---|
+| [`hackathon-orchestration`](hackathon-orchestration/SKILL.md) | Run a hackathon live — judge scheduling, demo queue, leaderboard, incident triage, and real-time announcements. |
+| [`multi-event-radar`](multi-event-radar/SKILL.md) | Rank upcoming events across a city or region by ICP density to decide where to attend or sponsor. |
+| [`sponsor-marketplace-matcher`](sponsor-marketplace-matcher/SKILL.md) | Produce a ranked sponsor target list for an event, community, or venue before outreach starts. |
+| [`event-recap-report`](event-recap-report/SKILL.md) | Produce the post-event recap deliverable that turns one event into the next sponsor's contract. |
+| [`venue-event-calendar`](venue-event-calendar/SKILL.md) | Build a 30 / 60 / 90-day programming calendar for a physical venue, balancing anchors, rituals, and rentals. |
+
 ## Contributing
 
 This repo is meant to be friendly to both humans and coding agents.

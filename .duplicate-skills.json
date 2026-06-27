@@ -100,6 +100,14 @@
     {
       "skills": ["event-recap-report", "multi-event-radar"],
       "reason": "event-recap-report looks backward at a finished event; multi-event-radar ranks future event opportunities."
+    },
+    {
+      "skills": ["event-lead-ranker", "event-leads"],
+      "reason": "Intentional: event-leads is the broad one-off enrichment pipeline (web-verify everyone, social-influence ranking, builder/judge curation, gated dashboard); event-lead-ranker is the config-driven, repeatable per-sponsor scoring plus the operations workflow (who to APPROVE to hit a headcount, which GOING leads to bump). They compose."
+    },
+    {
+      "skills": ["event-lead-ranker", "sponsor-marketplace-matcher"],
+      "reason": "Surface overlap only (both mention sponsors): sponsor-marketplace-matcher finds which sponsors to approach for an event; event-lead-ranker scores event attendees as leads for already-secured sponsors. Different inputs and outputs."
     }
   ],
   "known_duplicate_candidates": [

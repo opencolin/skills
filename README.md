@@ -80,6 +80,7 @@ Restart Codex after installing new skills.
 |---|---|
 | [`event-radar`](event-radar/SKILL.md) | Rank events worth attending and score event leads for follow-up. |
 | [`event-leads`](event-leads/SKILL.md) | Turn a registration CSV into verified, per-sponsor-scored, influence-ranked leads. |
+| [`event-lead-ranker`](event-lead-ranker/SKILL.md) | Config-driven, repeatable per-sponsor lead scoring + approval workflow: rank attendees, deep-screen the top tier to catch fakes, pick who to approve to hit a headcount, flag the worst leads to bump, and ship dashboard + CRM exports. |
 | [`agentic-engineering`](agentic-engineering/SKILL.md) | Working reference for building reliable autonomous coding agents and AI-native systems. |
 | [`revops-agent-factory`](revops-agent-factory/SKILL.md) | Read-only-first RevOps, sales, and marketing agents with an enforced write gate. |
 | [`transcript-to-podcast`](transcript-to-podcast/SKILL.md) | Turn any transcript or document into a realistic multi-voice podcast script. |

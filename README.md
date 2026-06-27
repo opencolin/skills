@@ -1,23 +1,60 @@
-# Coral Skills
+# opencolin/skills
 
-<!-- AUTO-GENERATED from withcoral/coral plugins/coral/skills. Do not edit directly. -->
+A public collection of agent skills by Colin and collaborating coding agents.
 
-Agent skills for [Coral](https://withcoral.com) - one SQL interface over APIs, files, and live sources, built for agents.
+Skills are small, reusable folders that teach an AI agent how to perform a specific workflow. Each skill lives in its own top-level directory and includes a required `SKILL.md` file plus optional metadata, references, scripts, and assets.
 
-## Installation
+## Install
+
+Install every skill in this repository:
 
 ```bash
-npx skills add withcoral/skills
+npx skills add opencolin/skills
 ```
 
-## Available Skills
+Or clone and copy selected skills into Codex:
+
+```bash
+git clone https://github.com/opencolin/skills.git
+mkdir -p ~/.codex/skills
+cp -R ./agent-opportunity-audit ~/.codex/skills/
+```
+
+Restart Codex after installing new skills.
+
+## Skills
+
+### AI Operator Field Kit
 
 | Skill | Description |
-|-------|-------------|
-| [`coral`](coral/SKILL.md) | Query live sources through Coral MCP. Use when the task needs GitHub, Jira, Slack, Linear, Datadog, Sentry, files, or connected data. |
-| [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. Use when authoring a standalone source for `coral source add --file`, or when adapting that spec into a Coral repo source under `sources/core` or `sources/community`. |
-| [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs for content, style, product fit, query ergonomics, documentation quality, and consistency with existing Coral sources. Use when Codex is asked to review a sources/core/name or sources/community/name source directory, a manifest.yaml, or a GitHub PR that adds or changes a Coral source. |
+|---|---|
+| [`agent-opportunity-audit`](agent-opportunity-audit/SKILL.md) | Audit a business, team, role, workflow, or tool stack to identify practical AI assistant and AI agent opportunities. |
+| [`business-workflow-decoder`](business-workflow-decoder/SKILL.md) | Turn messy descriptions of business operations into clear, reusable workflows. |
+| [`sop-from-screen-recording`](sop-from-screen-recording/SKILL.md) | Convert screen recordings, Loom transcripts, walkthrough notes, voice notes, rough demos, or process explanations into polished SOPs. |
+| [`offer-sharpening-agent`](offer-sharpening-agent/SKILL.md) | Clarify and strengthen service, consulting, agency, coaching, creator, or productized-service offers. |
+| [`client-delivery-copilot`](client-delivery-copilot/SKILL.md) | Turn client briefs, kickoff notes, proposals, discovery calls, scope notes, or messy project context into delivery plans and handoffs. |
+| [`content-engine-builder`](content-engine-builder/SKILL.md) | Repurpose source material into a practical content engine for founders, consultants, creators, agencies, and service businesses. |
+| [`meeting-to-momentum`](meeting-to-momentum/SKILL.md) | Convert meeting notes, transcripts, calls, or rough discussion notes into decisions, action items, owners, deadlines, and follow-ups. |
+| [`ai-skill-writer`](ai-skill-writer/SKILL.md) | Turn recurring tasks, SOPs, workflows, prompts, business processes, or expert know-how into reusable AI skills. |
+
+### Coral
+
+| Skill | Description |
+|---|---|
+| [`coral`](coral/SKILL.md) | Query live sources through Coral MCP. |
+| [`coral-create-source-spec`](coral-create-source-spec/SKILL.md) | Create or update a Coral source spec YAML for a custom HTTP API or local dataset. |
+| [`coral-review-source-spec`](coral-review-source-spec/SKILL.md) | Review new or updated Coral source manifests and source PRs. |
+
+## Contributing
+
+This repo is meant to be friendly to both humans and coding agents.
+
+Start with [CONTRIBUTING.md](CONTRIBUTING.md), copy the template in [`templates/skill`](templates/skill), then run:
+
+```bash
+python3 scripts/validate_skills.py
+```
 
 ## License
 
-Apache 2.0 - see [LICENSE](LICENSE).
+Apache 2.0. See [LICENSE](LICENSE).
